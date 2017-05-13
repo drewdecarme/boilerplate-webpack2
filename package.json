@@ -15,10 +15,11 @@
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
     "url-loader": "^0.5.8",
-    "webpack": "beta"
+    "webpack": "beta",
+    "webpack-dev-server": "2.2.0-rc.0"
   },
   "scripts": {
-    "start": "webpack --watch",
+    "start": "webpack-dev-server --inline --hot",
     "build": "webpack -p"
   }
 }

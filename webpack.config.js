@@ -6,8 +6,12 @@ const config = {
   entry: './app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/dist/',
     filename: 'bundle.js'
   },
+  plugins: [
+    new webpack.NamedModulesPlugin(),
+  ],
   module: {
     rules: [{
       test: /\.js$/,
@@ -21,7 +25,7 @@ const config = {
         }
       }]
     },{
-      test: /\.scss$/,
+      test: /\.(scss|sass)$/,
       use: [
         'style-loader',
         'css-loader',
